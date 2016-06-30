@@ -59,7 +59,7 @@
      var loadTable = function(data){
           var range = data.result.values;
           console.table(range);
-          var tableObj = $('<table border = "1" border-collapse:collapse />');
+          var tableObj = $('<table/>');
             for (i=0; i < range.length; i++) {
               var eachArray = range[i];
               //console.log(eachArray);

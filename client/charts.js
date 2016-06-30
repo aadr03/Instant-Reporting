@@ -53,13 +53,13 @@
         },
         series: [{
             name: country(data,1),
-            data: usaValue(data)
+            data: usaValueBar(data)
         }, {
             name: country(data,6),
-            data: canadaValue(data)
+            data: canadaValueBar(data)
         }, {
             name: country(data,11),
-            data: germanyValue(data)
+            data: germanyValueBar(data)
         }],
         });
       });
@@ -142,6 +142,38 @@ var canadaValue = function (data) {
   return myArray;
   };
 
+var usaValueBar = function (data) {
+  var range = data.result.values;
+  var valArray = range[3];
+  var myArray = [];
+    myArray.push(JSON.parse(valArray[1]));
+    myArray.push(JSON.parse(valArray[2]));
+    myArray.push(JSON.parse(valArray[3])); 
+    console.log(myArray);
+  return myArray;
+  };
+
+var canadaValueBar = function (data) {
+  var range = data.result.values;
+  var valArray = range[3];
+  var myArray = [];
+    myArray.push(parseInt(valArray[6]));
+    myArray.push(parseInt(valArray[7]));
+    myArray.push(parseInt(valArray[8])); 
+    console.log(myArray);
+  return myArray;
+  };
+
+  var germanyValueBar = function (data) {
+  var range = data.result.values;
+  var valArray = range[3];
+  var myArray = [];
+    myArray.push(parseInt(valArray[11]));
+    myArray.push(parseInt(valArray[12]));
+    myArray.push(parseInt(valArray[13])); 
+    console.log(myArray);
+  return myArray;
+  };
 // var update = function (data) {
 //   var range = data.result.values;
 //   var valArray = range[3];
