@@ -1,0 +1,25 @@
+.mainDiv {
+    background-color: white;
+    width: 100%;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+
+#line { 
+	display: inline-block;
+	width: 50%;
+	height: 500px;
+}
+
+#bar { 
+	float: right;
+	width: 50%;
+	height: 500px;
+}
+
+#pie { 
+	float: left;
+	width: 50%;
+	height: 500px;
+}

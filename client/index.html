@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="googleauth.js" type ="text/javascript"> </script>
+    <script src="charts.js" type ="text/javascript"> </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+  </head>
+  <body>
+  <div class="mainDiv">
+  <div class="Header">
+  <h1> QMetrix Reporting</h1>
+    <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Sheets API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+
+    <div id="container">
+      <!--<table border = "1">
+        <tr id = "somerow">
+          <td>
+          </td>
+        </tr>
+      </table>-->
+    </div>
+
+<!--     <script type="text/javascript">
+    setInterval('window.location.reload()', 30000);
+    </script> -->
+    <div id="chart">
+    <div id="line" class="mainchart"></div>
+    <div id="bar" class="mainchart"></div>
+    <div id="pie" class="mainchart"></div>
+    <div id="line" class="mainchart"></div>
+    </div>
+    </div>
+  </body>
+</html>
+
+
